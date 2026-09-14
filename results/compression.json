@@ -1,0 +1,64 @@
+{
+  "method": "lossless serialization compression, no retraining",
+  "before_bytes": 2054322,
+  "after_bytes": 745572,
+  "selected_format": "xz_6",
+  "selected_compression": [
+    "xz",
+    6
+  ],
+  "verified_texts": 2560,
+  "original_state_hash": "544c4c5a513ba6aa075005028b85ed45",
+  "features": 26739,
+  "classifier_weight_shape": [
+    3,
+    26739
+  ],
+  "measurements": [
+    {
+      "format": "none",
+      "bytes": 2054322,
+      "write_seconds": 0.111299,
+      "load_seconds_median_3": 0.069545,
+      "same_state": true,
+      "same_predictions": true,
+      "same_probabilities": true
+    },
+    {
+      "format": "zlib_3",
+      "bytes": 974008,
+      "write_seconds": 0.155932,
+      "load_seconds_median_3": 0.083321,
+      "same_state": true,
+      "same_predictions": true,
+      "same_probabilities": true
+    },
+    {
+      "format": "gzip_3",
+      "bytes": 974020,
+      "write_seconds": 0.178508,
+      "load_seconds_median_3": 0.082567,
+      "same_state": true,
+      "same_predictions": true,
+      "same_probabilities": true
+    },
+    {
+      "format": "xz_3",
+      "bytes": 774300,
+      "write_seconds": 0.484724,
+      "load_seconds_median_3": 0.126321,
+      "same_state": true,
+      "same_predictions": true,
+      "same_probabilities": true
+    },
+    {
+      "format": "xz_6",
+      "bytes": 745572,
+      "write_seconds": 0.846863,
+      "load_seconds_median_3": 0.121195,
+      "same_state": true,
+      "same_predictions": true,
+      "same_probabilities": true
+    }
+  ]
+}

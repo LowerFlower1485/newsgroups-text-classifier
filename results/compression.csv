@@ -1,0 +1,6 @@
+﻿format,bytes,write_seconds,load_seconds_median_3,same_state,same_predictions,same_probabilities
+none,2054322,0.111299,0.069545,True,True,True
+zlib_3,974008,0.155932,0.083321,True,True,True
+gzip_3,974020,0.178508,0.082567,True,True,True
+xz_3,774300,0.484724,0.126321,True,True,True
+xz_6,745572,0.846863,0.121195,True,True,True

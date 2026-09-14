@@ -1,0 +1,11 @@
+{
+  "config": {
+    "name": "complement_nb",
+    "kind": "word",
+    "algorithm": "nb",
+    "alpha": 1.0
+  },
+  "validation_macro_f1": 0.8666846981617319,
+  "train_fingerprint": "c17f31731bdcd397ac5d3dbd59018b6da1fbf8f7ad29e7ed4a3897682b7fab3f",
+  "criterion": "highest validation macro-F1"
+}

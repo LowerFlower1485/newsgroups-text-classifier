@@ -1,0 +1,24 @@
+{
+  "raw": 1575,
+  "empty": 41,
+  "duplicates_removed": 1,
+  "conflicting_texts": 0,
+  "conflicting_rows_removed": 0,
+  "train_overlap_removed": 0,
+  "remaining": 1533,
+  "raw_class_counts": {
+    "2": 465,
+    "1": 564,
+    "0": 546
+  },
+  "clean_class_counts": {
+    "2": 453,
+    "1": 548,
+    "0": 532
+  },
+  "word_lengths_nonempty": {
+    "min": 1,
+    "median": 118.0,
+    "max": 11198
+  }
+}

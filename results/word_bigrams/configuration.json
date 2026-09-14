@@ -1,0 +1,5 @@
+{
+  "name": "word_bigrams",
+  "kind": "bigram",
+  "C": 1.0
+}

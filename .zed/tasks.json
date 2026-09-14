@@ -1,0 +1,45 @@
+[
+  {
+    "label": "Python: ввод текста",
+    "command": ".\\.venv\\Scripts\\python.exe",
+    "args": [
+      "-X",
+      "utf8",
+      "-u",
+      "main.py"
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "save": "all",
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Python: эксперименты",
+    "command": ".\\.venv\\Scripts\\python.exe",
+    "args": [
+      "-X",
+      "utf8",
+      "-u",
+      "train.py"
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "save": "all",
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Python: финальная оценка",
+    "command": ".\\.venv\\Scripts\\python.exe",
+    "args": [
+      "-X",
+      "utf8",
+      "-u",
+      "train.py",
+      "--final"
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "save": "all",
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]

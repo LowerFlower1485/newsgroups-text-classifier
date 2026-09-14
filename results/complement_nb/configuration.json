@@ -1,0 +1,6 @@
+{
+  "name": "complement_nb",
+  "kind": "word",
+  "algorithm": "nb",
+  "alpha": 1.0
+}

@@ -1,0 +1,59 @@
+{
+  "macro_f1": 0.7502941631616012,
+  "accuracy": 0.7740993184031159,
+  "class_order": [
+    "talk.politics.guns",
+    "talk.politics.mideast",
+    "talk.politics.misc"
+  ],
+  "confusion_matrix": [
+    [
+      316,
+      26,
+      12
+    ],
+    [
+      21,
+      342,
+      7
+    ],
+    [
+      132,
+      34,
+      137
+    ]
+  ],
+  "report": {
+    "talk.politics.guns": {
+      "precision": 0.673773987206823,
+      "recall": 0.8926553672316384,
+      "f1-score": 0.7679222357229648,
+      "support": 354.0
+    },
+    "talk.politics.mideast": {
+      "precision": 0.8507462686567164,
+      "recall": 0.9243243243243243,
+      "f1-score": 0.8860103626943006,
+      "support": 370.0
+    },
+    "talk.politics.misc": {
+      "precision": 0.8782051282051282,
+      "recall": 0.4521452145214521,
+      "f1-score": 0.5969498910675382,
+      "support": 303.0
+    },
+    "accuracy": 0.7740993184031159,
+    "macro avg": {
+      "precision": 0.8009084613562226,
+      "recall": 0.7563749686924716,
+      "f1-score": 0.7502941631616012,
+      "support": 1027.0
+    },
+    "weighted avg": {
+      "precision": 0.7978464116069662,
+      "recall": 0.7740993184031159,
+      "f1-score": 0.7600234884481838,
+      "support": 1027.0
+    }
+  }
+}
