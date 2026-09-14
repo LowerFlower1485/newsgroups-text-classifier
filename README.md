@@ -1,6 +1,6 @@
 # Классификация политических текстов
 
-Проект Дмитрия: 20 Newsgroups, категории guns / mideast / misc. Результаты экспериментов и разбор ошибок — в [results/analysis.md](results/analysis.md).
+Задание по классификации текстов из набора 20 Newsgroups. Категории: guns / mideast / misc. Результаты экспериментов и разбор ошибок — в [results/analysis.md](results/analysis.md).
 
 ## Запуск в PowerShell
 
