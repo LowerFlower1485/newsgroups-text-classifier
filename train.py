@@ -1,6 +1,3 @@
-"""python train.py — эксперименты; python train.py --final — финальная оценка.
-Прогноз и ввод текста находятся в main.py.
-"""
 import argparse
 import csv
 import hashlib
@@ -68,7 +65,7 @@ def evaluate(model, records, names, output, title):
                "predicted": names[int(pred)], "text": row[1]}
               for row, pred in zip(records, predictions) if row[2] != pred]
     save_csv(output / "errors.csv", errors, ["source_index", "true", "predicted", "text"])
-    # Полные ошибки сохраняем для чтения, не заменяя их автоматическими объяснениями.
+
     guns, misc = names.index("talk.politics.guns"), names.index("talk.politics.misc")
     return {
         "macro_f1": float(f1_score(labels, predictions, average="macro")),
@@ -79,7 +76,7 @@ def evaluate(model, records, names, output, title):
 
 
 def validate_preparation():
-    # Маленькая проверка защиты от пустот, повторов, конфликтов и пересечений.
+
     rows = [(0, "", 0), (1, "same", 0), (2, "same", 0),
             (3, "conflict", 0), (4, "conflict", 1), (5, "overlap", 1)]
     cleaned, stats = prepare_data(rows, {"overlap"})
@@ -125,7 +122,7 @@ def main():
         print(f"Выбор зафиксирован по валидации: {config['name']}", flush=True)
         final_model = build_model(config)
         final_model.fit(*unpack(cleaned))
-        # Test загружается только после выбора настроек и обучения финальной модели.
+
         test_raw, test_names = load_data("test")
         assert names == test_names
         test, test_stats = prepare_data(test_raw, {r[1] for r in raw})
@@ -137,7 +134,7 @@ def main():
         artifacts.mkdir(exist_ok=True)
         save_model({"model": final_model, "class_names": names, "config": config},
                     artifacts / "model.joblib")
-        # Проверяем, что сохранение не изменило предсказания.
+
         restored = joblib.load(artifacts / "model.joblib")
         sample = [r[1] for r in test[:10]]
         assert np.array_equal(final_model.predict(sample), restored["model"].predict(sample))
@@ -189,7 +186,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # Для маленьких разреженных задач много BLAS-потоков часто создают лишние расходы.
+
     with threadpool_limits(limits=1):
         main()
 

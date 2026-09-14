@@ -1,4 +1,3 @@
-"""Заранее заданные эксперименты: меняем одну группу настроек за раз."""
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import ComplementNB
@@ -21,7 +20,7 @@ def build_model(config):
         vectorizer = TfidfVectorizer(ngram_range=(1, 2))
     else:
         vectorizer = TfidfVectorizer()
-    # Создаём классификатор; обученные веса появятся после fit().
+
     if config.get("algorithm") == "nb":
         classifier = ComplementNB(alpha=config["alpha"])
     else:

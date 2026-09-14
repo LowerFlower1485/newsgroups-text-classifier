@@ -1,4 +1,3 @@
-"""Загрузка, анализ и очистка данных. Правила одинаковы для train и test."""
 from collections import Counter
 from statistics import median
 from typing import cast
@@ -27,7 +26,7 @@ def prepare_data(records, excluded_texts=None):
     for _, text, label in nonempty:
         labels_by_text.setdefault(text, set()).add(label)
     conflicts = {text for text, labels in labels_by_text.items() if len(labels) > 1}
-    # Противоречивые группы исключаем целиком, а не выбираем удобную метку.
+
     seen = set()
     cleaned = []
     duplicate_rows = overlap_rows = conflict_rows = 0

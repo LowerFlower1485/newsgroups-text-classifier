@@ -1,4 +1,3 @@
-"""Сжатие обученной модели без изменения признаков и параметров."""
 import csv
 import json
 from pathlib import Path
@@ -13,7 +12,7 @@ ROOT = Path(__file__).resolve().parent
 
 
 def save_model(bundle, path):
-    """Проверяем файл до замены рабочего артефакта. Настройки берём из замера."""
+
     report_path = ROOT / "results" / "compression.json"
     compression = ("xz", 6)
     if report_path.exists():
@@ -29,7 +28,7 @@ def save_model(bundle, path):
 
 
 def optimize_model(path, records):
-    """Сравниваем хранение одной модели; обучения и подбора по test нет."""
+
     bundle = joblib.load(path)
     before_bytes = path.stat().st_size
     texts = [row[1] for row in records]
@@ -39,7 +38,7 @@ def optimize_model(path, records):
     rows = []
     formats = [("none", 0), ("zlib_3", ("zlib", 3)),
                ("gzip_3", ("gzip", 3)), ("xz_3", ("xz", 3)), ("xz_6", ("xz", 6))]
-    # Временные файлы удаляются автоматически; остаётся только выбранный артефакт.
+
     with TemporaryDirectory(dir=path.parent, prefix="compression-") as directory:
         for name, compression in formats:
             candidate = Path(directory) / f"{name}.joblib"
